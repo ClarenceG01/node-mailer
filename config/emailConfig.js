@@ -1,16 +1,10 @@
 require("dotenv").config();
 
 const email_config = {
-  service: "gmail",
-  port: 587,
-  secure: true,
-  secureConnection: false,
+  service: process.env.EMAIL_SERVICE,
   auth: {
-    user: process.env.EMAIL_SENDER,
-    pass: process.env.EMAIL_PWD,
-  },
-  tls: {
-    rejectUnAuthorized: true,
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD,
   },
 };
 
