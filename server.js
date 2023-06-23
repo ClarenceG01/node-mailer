@@ -15,7 +15,7 @@ const message = {
   subject: "Hello from Node.js",
   text: "Hello from Node.js",
 };
-cron.schedule("00 13 * 6,7 *", async () => {
+cron.schedule("00 13 * 6,7 5", async () => {
   console.log("sending email");
   await sendMail({ message });
 });
