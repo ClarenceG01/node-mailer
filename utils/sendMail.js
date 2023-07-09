@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 const email_config = require("../config/emailConfig.js");
 
-const transporter = nodemailer.createTransport({ email_config });
+const transporter = nodemailer.createTransport(email_config);
 
 async function sendMail(message) {
   try {
